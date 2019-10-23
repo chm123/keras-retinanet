@@ -13,9 +13,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+import sys
+sys.path.insert(0, '/data/hsiming/github/keras-retinanet/keras_retnanet/')
 
 import keras
-from . import backend
+import backend
 
 
 def focal(alpha=0.25, gamma=2.0):

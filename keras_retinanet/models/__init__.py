@@ -1,5 +1,6 @@
 from __future__ import print_function
 import sys
+sys.path.insert(0, '/data/hsiming/github/keras-retinanet/keras_retnanet/')
 
 
 class Backbone(object):
@@ -7,9 +8,9 @@ class Backbone(object):
     """
     def __init__(self, backbone):
         # a dictionary mapping custom layer names to the correct classes
-        from .. import layers
-        from .. import losses
-        from .. import initializers
+        import layers
+        import losses
+        import initializers
         self.custom_objects = {
             'UpsampleLike'     : layers.UpsampleLike,
             'PriorProbability' : initializers.PriorProbability,

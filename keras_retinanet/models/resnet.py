@@ -13,6 +13,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+import sys
+sys.path.insert(0, '/data/hsiming/github/keras-retinanet/keras_retnanet/')
 
 import keras
 from keras.utils import get_file
@@ -21,7 +23,7 @@ import keras_resnet.models
 
 from . import retinanet
 from . import Backbone
-from ..utils.image import preprocess_image
+from utils.image import preprocess_image
 
 
 class ResNetBackbone(Backbone):

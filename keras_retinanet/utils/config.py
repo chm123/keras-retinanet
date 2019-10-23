@@ -13,12 +13,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+import sys
+sys.path.insert(0, '/data/hsiming/github/keras-retinanet/keras_retnanet/')
 
 import configparser
 import numpy as np
 import keras
-from ..utils.anchors import AnchorParameters
-
+from utils.anchors import AnchorParameters
 
 def read_config_file(config_path):
     config = configparser.ConfigParser()

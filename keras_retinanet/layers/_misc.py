@@ -13,10 +13,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+import sys
+sys.path.insert(0, '/data/hsiming/github/keras-retinanet/keras_retinanet/')
 
 import keras
-from .. import backend
-from ..utils import anchors as utils_anchors
+import backend
+from utils import anchors as utils_anchors
 
 import numpy as np
 

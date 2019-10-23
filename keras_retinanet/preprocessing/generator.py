@@ -13,6 +13,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
+import sys
+sys.path.insert(0, '/data/hsiming/github/keras-retinanet/keras_retnanet/')
 
 import numpy as np
 import random
@@ -20,20 +22,20 @@ import warnings
 
 import keras
 
-from ..utils.anchors import (
+from utils.anchors import (
     anchor_targets_bbox,
     anchors_for_shape,
     guess_shapes
 )
-from ..utils.config import parse_anchor_parameters
-from ..utils.image import (
+from utils.config import parse_anchor_parameters
+from utils.image import (
     TransformParameters,
     adjust_transform_for_image,
     apply_transform,
     preprocess_image,
     resize_image,
 )
-from ..utils.transform import transform_aabb
+from utils.transform import transform_aabb
 
 
 class Generator(keras.utils.Sequence):
